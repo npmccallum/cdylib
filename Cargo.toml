@@ -1,0 +1,19 @@
+[package]
+name = "cdylib"
+version = "0.1.0"
+authors = ["nmccallu <npmccallum@redhat.com>"]
+edition = "2018"
+
+[dependencies]
+
+[build-dependencies]
+cc = "*"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
